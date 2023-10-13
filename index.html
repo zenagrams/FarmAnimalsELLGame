@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <script async src="main.js"></script>
 </head>
+<header>
+  <h1>Animal Sound Game</h1>
+  <p> Click on animal pictures to hear the sounds. Feel free to use the keyboard as well. The map for keyboard is provided.</p>
+  <button>English</button>
+  <button>Spanish</button>
+</header>
 <body>
    <!--create game div,create image div,create button to switch language-->
-  <header>
-    <h1>Animal Sound Game</h1>
-    <p> Click on animal pictures to hear the sounds. Feel free to use the keyboard as well. The map for keyboard is provided.</p>
-    <button>English</button>
-    <button>Spanish</button>
-  </header>
   <div id="container">
   <main id="gallery">
         <div class="imagebox"><img class="image" src="images/chickenchicks.jpg" alt="A hen and her chickens"></div>
@@ -40,11 +40,19 @@
        <div> Sheep:<button id="x">x</button></div>
        <div> Horse:<button id="c">c</button></div>
   </aside>
+  <audio id="sound1" src="audio/chicken.mp3" preload="auto"></audio>
+  <audio id="sound2" src="audio/cow.mp3" preload="auto"></audio>
+  <audio id="sound3" src="audio/dog.mp3" preload="auto"></audio>
+  <audio id="sound4" src="audio/duck.mp3" preload="auto"></audio>
+  <audio id="sound5" src="audio/goat.mp3" preload="auto"></audio>
+  <audio id="sound6" src="audio/horse.mp3" preload="auto"></audio>
+  <audio id="sound7" src="audio/pig.mp3" preload="auto"></audio>
+  <audio id="sound8" src="audio/rooster.mp3" preload="auto"></audio>
+  <audio id="sound9" src="audio/sheep.mp3" preload="auto"></audio>
+
   </div>
-  <footer> 
-    <p>Thanks for stopping by! Created by Zenaida Adame &copy 2023</p>
-  </footer>
-  
-    
 </body>
+<footer> 
+  <p>Thanks for stopping by! Created by Zenaida Adame &copy 2023</p>
+</footer>
 </html>
