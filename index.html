@@ -13,32 +13,35 @@
   <button>English</button>
   <button>Spanish</button>
 </header>
+
 <body>
-   <!--create game div,create image div,create button to switch language-->
+  <!--create game div,create image div,create button to switch language-->
+  <h2 id="question"></h2>
+  <div id="score">Score: <span id="scoreNumber">0</span></div>
+  <div id="symbols"></div>
   <div id="container">
   <main id="gallery">
-        <div class="imagebox"><img class="image" src="images/chickenchicks.jpg" alt="A hen and her chickens"></div>
-        <div class="imagebox"><img class="image" src="images/dog.jpg" alt="Picture of a dog"></div>
-        <div class="imagebox"><img class="image" src="images/duck.jpg" alt="Picture of a duck"></div>
-        <div class="imagebox"><img class="image" src="images/goat.jpg" alt="Picture of a Goat"></div>
-        <div class="imagebox"><img class="image" src="images/cow.jpg" alt="Picture of a cow"></div>
-        <div class="imagebox"><img class="image" src="images/pig.png" alt="Picture of a pig"></div>
-        <div class="imagebox"><img class="image" src="images/rooster.jpg" alt="Picture of a rooster"></div>
-        <div class="imagebox"><img class="image" src="images/sheep.jpg" alt="Picture of a sheep"></div>
-        <div class="imagebox"><img class="image" src="images/horse.jpg" alt="Picture of a horse"></div>
+        <div class="imagebox"><img class="image" id="hen" src="images/chickenchicks.jpg" alt="A hen and her chickens"></div>
+        <div class="imagebox"><img class="image" id="dog" src="images/dog.jpg" alt="Picture of a dog"></div>
+        <div class="imagebox"><img class="image" id="duck" src="images/duck.jpg" alt="Picture of a duck"></div>
+        <div class="imagebox"><img class="image" id="goat" src="images/goat.jpg" alt="Picture of a Goat"></div>
+        <div class="imagebox"><img class="image" id="cow" src="images/cow.jpg" alt="Picture of a cow"></div>
+        <div class="imagebox"><img class="image" id="pig" src="images/pig.png" alt="Picture of a pig"></div>
+        <div class="imagebox"><img class="image" id="rooster" src="images/rooster.jpg" alt="Picture of a rooster"></div>
+        <div class="imagebox"><img class="image" id="sheep" src="images/sheep.jpg" alt="Picture of a sheep"></div>
+        <div class="imagebox"><img class="image" id="horse" src="images/horse.jpg" alt="Picture of a horse"></div>
   </main>
   <aside>
         <h1>Animal Sound Key</h1>
-        <p>Use the keyboard to hear animal sounds.</p>
-       <div> Hen and Chickens: <button>W</button></div>
-       <div> Dog: <button id="a">a</button></div>
-       <div>Duck:<button id="s">s</button></div>
-       <div>Goat:<button id="d">d</button></div>
-       <div>Cow:<button id="q">q</button></div>
-       <div>Pig:<button id="e">e</button></div>
-       <div>Rooster:<button id="z">z</button></div>
-       <div> Sheep:<button id="x">x</button></div>
-       <div> Horse:<button id="c">c</button></div>
+      <div><h3></h3><button >W</button></div>
+      <div> <h3></h3> <button>a</button></div>
+      <div><h3></h3><button >s</button></div>
+      <div><h3></h3><button >d</button></div>
+      <div><h3></h3><button >q</button></div>
+      <div><h3></h3><button>e</button></div>
+      <div><h3></h3><button >z</button></div>
+      <div><h3></h3><button >x</button></div>
+      <div><h3></h3><button >c</button></div>
   </aside>
   <audio id="sound1" src="audio/chicken.mp3" preload="auto"></audio>
   <audio id="sound2" src="audio/cow.mp3" preload="auto"></audio>
@@ -49,7 +52,6 @@
   <audio id="sound7" src="audio/pig.mp3" preload="auto"></audio>
   <audio id="sound8" src="audio/rooster.mp3" preload="auto"></audio>
   <audio id="sound9" src="audio/sheep.mp3" preload="auto"></audio>
-
   </div>
 </body>
 <footer> 
