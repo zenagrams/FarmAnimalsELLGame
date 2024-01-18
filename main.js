@@ -25,29 +25,27 @@ let textsEn = ['Animal Sound Game', 'Click on animal pictures to hear the sounds
 let textsEs = ['Juego de Sonidos de Animales', 'Haz clic en las imágenes de los animales para escuchar los sonidos. No dudes en usar el teclado. Se proporciona una guía para el teclado.','Tecla de sonido de animal', 'Gallina', 'Perro', 'Pato', 'Cabra', 'Vaca', 'Cerdo', 'Gallo', 'Oveja', 'Caballo', '¿Dónde está','¡Gracias por pasar! Creado por Zenaida Adame'];
 let question = document.getElementsByTagName('h2')[0];
 
-let score = 0;
-
-let currentAnimal = "";
-let currentLanguage ="en";
-
-// Update the text elements based on the current language
-function updateQuestion() {
-    if (currentLanguage == 'en') {
-        question.textContent = textsEn[12];
-    
-    } else {
-        question.textContent = textsEs[12];
-    }
-    }
-    // Update the text elements initially
-    updateQuestion();
-    
 let animalsEn = ["Hen", "Dog", "Duck", "Goat", "Cow", "Pig", "Rooster", "Sheep", "Horse"];
 let animalsEs = ["Gallina", "Perro", "Pato", "Cabra", "Vaca", "Cerdo", "Gallo", "Oveja", "Caballo"];
 
-currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-document.getElementById('question').innerText = question + currentAnimal + "?";
+let score = 0;
 
+let currentAnimal = "";
+let currentLanguage ="english";
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+updateQuestion();
+
+// Update the text elements based on the current language
+
+function updateQuestion() {
+        // Update the text content of the question element with the question and animal name
+        if (currentLanguage == 'english') {
+            question.textContent = textsEn[12] + "" + currentAnimal + "?";
+        } else {
+            question.textContent = textsEs[12] + "" + currentAnimal + "?";
+        };
+    }
+    
 // Attach event listeners to the buttons
 henButton.addEventListener('click', function() {
 playSound(henSound);
@@ -59,8 +57,6 @@ if (currentAnimal === 'Hen') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-        document.getElementById('question').innerText = question + currentAnimal + "?";
     }, 1000);
 } else {
     score--;
@@ -70,10 +66,11 @@ if (currentAnimal === 'Hen') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-        document.getElementById('question').innerText = question + currentAnimal + "?";
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+question.textContent = question.textContent + currentAnimal + "?";
+updateQuestion();
 });
 dogButton.addEventListener('click', function() {
 playSound(dogSound);
@@ -85,8 +82,6 @@ if (currentAnimal === 'Dog') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-        document.getElementById('question').innerText = question + currentAnimal + "?";
     }, 1000);
 } else {
     score--;
@@ -96,11 +91,11 @@ if (currentAnimal === 'Dog') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+question.textContent = question.textContent + currentAnimal + "?";
+updateQuestion();
 });
 duckButton.addEventListener('click', function() {
 playSound(duckSound);
@@ -112,9 +107,6 @@ if (currentAnimal === 'Duck') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
     }, 1000);
 } else {
     score--;
@@ -124,11 +116,12 @@ if (currentAnimal === 'Duck') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
 
-        document.getElementById('question').innerText = question+ currentAnimal + "?";
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+document.getElementById('question').innerText = question + currentAnimal + "?";
+updateQuestion();
 });
 goatButton.addEventListener('click', function() {
 playSound(goatSound);
@@ -140,9 +133,7 @@ if (currentAnimal === 'Goat') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+    
     }, 1000);
 } else {
     score--;
@@ -152,11 +143,12 @@ if (currentAnimal === 'Goat') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+        
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+    question.textContent = question.textContent + currentAnimal + "?";
+    updateQuestion();
 });
 cowButton.addEventListener('click', function() {
 playSound(cowSound);
@@ -168,9 +160,7 @@ if (currentAnimal === 'Cow') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+       
     }, 1000);
 } else {
     score--;
@@ -180,11 +170,12 @@ if (currentAnimal === 'Cow') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+        
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+    question.textContent = question.textContent + currentAnimal + "?";
+    updateQuestion();
 });
 pigButton.addEventListener('click', function() {
 playSound(pigSound);
@@ -196,9 +187,7 @@ if (currentAnimal === 'Pig') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+        
     }, 1000);
 } else {
     score--;
@@ -208,11 +197,12 @@ if (currentAnimal === 'Pig') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+        
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+question.textContent = question.textContent + currentAnimal + "?";
+updateQuestion();
 });
 roosterButton.addEventListener('click', function() {
 playSound(roosterSound);
@@ -224,9 +214,7 @@ if (currentAnimal === 'Rooster') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+    
     }, 1000);
 } else {
     score--;
@@ -236,11 +224,12 @@ if (currentAnimal === 'Rooster') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+        
     }, 1000);
 }
+    currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+question.textContent = question.textContent + currentAnimal + "?";
+updateQuestion();
 });
 sheepButton.addEventListener('click', function() {
 playSound(sheepSound);
@@ -252,9 +241,7 @@ if (currentAnimal === 'Sheep') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+    
     }, 1000);
 } else {
     score--;
@@ -264,11 +251,12 @@ if (currentAnimal === 'Sheep') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
+        
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+question.textContent = question.textContent + currentAnimal + "?";
+updateQuestion();
 });
 horseButton.addEventListener('click', function() {
 playSound(horseSound);
@@ -280,9 +268,6 @@ if (currentAnimal === 'Horse') {
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";
     }, 1000);
 } else {
     score--;
@@ -292,12 +277,11 @@ if (currentAnimal === 'Horse') {
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
-        currentAnimal = currentLanguage === 'en' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-
-        document.getElementById('question').innerText = question + currentAnimal + "?";  
-
     }, 1000);
 }
+currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
+question.textContent = question.textContent + currentAnimal + "?";
+updateQuestion();
 });
 
 // Function to play a sound
@@ -340,6 +324,7 @@ let key = event.key;
 }
 });
 
+
 // Get a reference to the text elements
 let title = document.getElementsByTagName('h1')[0];
 let description = document.getElementsByTagName('p')[0];
@@ -353,13 +338,13 @@ let pig = document.getElementsByTagName('h3')[5];
 let rooster = document.getElementsByTagName('h3')[6];
 let sheep = document.getElementsByTagName('h3')[7];
 let horse = document.getElementsByTagName('h3')[8];
-let footer = document.getElementsByTagName('p')[1];
+let footer = document.getElementById('footer');
 
 
 
 // Update the text elements based on the current language
 function updateTexts() {
-if (currentLanguage == 'en') {
+if (currentLanguage == 'english') {
     title.textContent = textsEn[0];
     description.textContent = textsEn[1];
     map.textContent = textsEn[2];
@@ -372,8 +357,8 @@ if (currentLanguage == 'en') {
     rooster.textContent = textsEn[9];
     sheep.textContent = textsEn[10];
     horse.textContent = textsEn[11];
-    footer.textContent = textsEn[13];
-} else {
+    // footer.textContent = textsEn[13];
+} else if(currentLanguage =='spanish'){
     title.textContent = textsEs[0];
     description.textContent = textsEs[1];
     map.textContent = textsEs[2];
@@ -386,7 +371,7 @@ if (currentLanguage == 'en') {
     rooster.textContent = textsEs[9];
     sheep.textContent = textsEs[10];
     horse.textContent = textsEs[11];
-    footer.textContent =textsEs[13];
+    // footer.textContent =textsEs[13];
 }
 }
 
@@ -394,16 +379,18 @@ if (currentLanguage == 'en') {
 updateTexts();
 
 // Get a reference to the language buttons
-let buttonEn = document.getElementsByTagName('button')[0];
-let buttonEs = document.getElementsByTagName('button')[1];
+let buttonEn = document.getElementById('buttonen');
+let buttonEs = document.getElementById('buttones');
 
 // Add event listeners to the language buttons
 buttonEn.addEventListener('click', function() {
-currentLanguage = 'en';
+currentLanguage = 'english';
 updateTexts();
+updateQuestion();
 });
 buttonEs.addEventListener('click', function() {
-currentLanguage = 'es';
+currentLanguage = 'spanish';
 updateTexts();
+updateQuestion();
 });
 

@@ -9,13 +9,13 @@
 </head>
 <header>
   <h1>Animal Sound Game</h1>
-  <p> Click on animal pictures to hear the sounds. Feel free to use the keyboard as well. The map for keyboard is provided.</p>
-  <button>English</button>
-  <button>Spanish</button>
 </header>
 
 <body>
   <!--create game div,create image div,create button to switch language-->
+  <p> Click on animal pictures to hear the sounds. Feel free to use the keyboard as well. The map for keyboard is provided.</p>
+  <button id="buttonen">English</button>
+  <button id="buttones">Spanish</button>
   <h2 id="question"></h2>
   <div id="score">Score: <span id="scoreNumber">0</span></div>
   <div id="symbols"></div>
@@ -30,18 +30,19 @@
         <div class="imagebox"><img class="image" id="rooster" src="images/rooster.jpg" alt="Picture of a rooster"></div>
         <div class="imagebox"><img class="image" id="sheep" src="images/sheep.jpg" alt="Picture of a sheep"></div>
         <div class="imagebox"><img class="image" id="horse" src="images/horse.jpg" alt="Picture of a horse"></div>
-  </main>
-  <aside>
-        <h1>Animal Sound Key</h1>
-      <div><h3></h3><button >W</button></div>
-      <div> <h3></h3> <button>a</button></div>
-      <div><h3></h3><button >s</button></div>
-      <div><h3></h3><button >d</button></div>
-      <div><h3></h3><button >q</button></div>
-      <div><h3></h3><button>e</button></div>
-      <div><h3></h3><button >z</button></div>
-      <div><h3></h3><button >x</button></div>
-      <div><h3></h3><button >c</button></div>
+      </main>
+  <aside class="aside-container">
+        <div class="row"><h1>Animal Sound Key</h1>
+      <div class="col"><h3></h3><button >W</button></div>
+      <div class="col"> <h3></h3> <button>a</button></div>
+      <div class="col"><h3></h3><button >s</button></div>
+      <div class="col"><h3></h3><button >d</button></div>
+      <div class="col"><h3></h3><button >q</button></div>
+      <div class="col"><h3></h3><button>e</button></div>
+      <div class="col"><h3></h3><button >z</button></div>
+      <div class="col"><h3></h3><button >x</button></div>
+      <div class="col"><h3></h3><button >c</button></div>
+    </div>
   </aside>
   <audio id="sound1" src="audio/chicken.mp3" preload="auto"></audio>
   <audio id="sound2" src="audio/cow.mp3" preload="auto"></audio>
@@ -56,6 +57,6 @@
   <script src="main.js"></script>
 </body>
 <footer> 
-  <p>Thanks for stopping by! Created by Zenaida Adame &copy 2023</p>
+  <p id="footer">Thanks for stopping by! Created by Zenaida Adame &copy 2023</p>
 </footer>
 </html>
