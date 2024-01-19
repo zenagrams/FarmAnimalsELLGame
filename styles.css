@@ -1,51 +1,113 @@
+*{
+    font-family: sans-serif;
+}
 
- /* @font-face {
-    font-family: "Quicksand";
-    src: url(Quicksand-VariableFont_wght.ttf);
- }
- *{
-    margin:0;
-    padding:0;
-    font-family: "Quicksand";
-} */
+#logo{
+    width:30vh;
+}
 
-.aside-container {
-    /* Add your styling here */
-    background-color: #f0f0f0; /* Example: change the background color */
-    padding: 20px; /* Example: add some padding */
-    width: 200px; /* Example: set a fixed width */
- }
- 
- button {
-    background-color: #007BFF; /* Example: change the background color */
-    color: white; /* Example: change the text color */
-    border: none; /* Example: remove the border */
-    padding: 10px 20px; /* Example: add some padding */
-    margin: 10px 0; /* Example: add some margin */
-    cursor: pointer; /* Example: change the mouse cursor when hovering over the button */
- }
+.logo-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left:40px;
+}
 
-#buttones, #buttonen {
-    background-color:gray; /* Example: change the background color */
-    color: white; /* Example: change the text color */
-    border: none; /* Example: remove the border */
-    padding: 10px 20px; /* Example: add some padding */
-    margin: 10px 0; /* Example: add some margin */
-    cursor: pointer; /* Example: change the mouse cursor when hovering over the button */
- }
- 
+#link{
+padding-top:10px;
+text-decoration: none;
+color:#321515;
+}
+
+#link:hover{
+color:white;
+}
+
+header, footer{
+    background-color: #836f63;
+    margin:0 0;
+    padding: 1rem;
+}
+
+footer,.intro{
+    padding:2rem;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro{
+    flex-direction: column;
+    align-items: center;
+    background-color:#321515f6 ;
+}
+
+.header-row {
+    position: relative;
+}
+
+#buttones,#buttonen{
+    position: absolute;
+    bottom:0;
+    right: 80px;
+    padding:10px;
+    border-radius: 30px;
+    background-color:rgb(65, 65, 65); 
+    border:solid 2px white;
+    color: white;
+    cursor:pointer; 
+}
+
+#buttonen{
+    right: 175px;
+}
+
+#buttones:hover,#buttonen:hover{
+    background-color:#C58264;
+    color:white;
+    border:solid 1px white;
+}
+
+.game-score-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding:1rem 1rem;
+    background-color: #C58264;
+    color:white;
+}
+
+#question{
+    padding:1rem 1rem;
+    margin-right:200px;
+    margin-left:200px;
+}
+
+#score{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 5px;
+    border:white solid 1px;
+    padding:10px;
+    align-items: center;
+    font-size: 1.3rem;
+}
 
 #container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-around;
+    margin-top: 30px;
+    border-radius: 5px;
 }
 
 #gallery{
     width:500px;
     height:500px;
-    margin:auto;
-    background-color: rgb(199, 201, 200);
+    background-color:rgb(65, 65, 65);
     padding: 20px;
     display:flex;
     flex-wrap:wrap;
@@ -72,24 +134,69 @@
     border-width: 3px;
     cursor:pointer;
 }
-.row {
-    background-color: rgb(149, 181, 240);
+
+.aside-container{
+    background-color: rgb(65, 65, 65);
+    color:white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.row{
+    padding:5px;
+}
+.col{
     display: flex;
+    padding-left:20px;
+    border-top: white .1px solid;
+}
+
+button{
+    margin-left:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    #container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .aside-container{
+        background-color: rgb(65, 65, 65);
+        color:white;
+        font-size: small;
+    }
+
+    .row{
+        padding:0 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .col{
+        border-top: white .1px solid;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    button{
+        background-color: #ddd;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     flex-direction: column;
-}
-.col {
-    background-color: rgb(54, 101, 187);
-    padding: .5rem;
-    color: white;
-    margin: .5rem;
-}
-
-header, footer{
-    background-color: blanchedalmond;
-    margin:0 0;
-    padding: 5rem;
-}
-
-footer{
-    padding:2rem;
+    }
+    .row {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr); /* Creates 5 rows of equal height */
+        grid-template-columns: repeat(5, 1fr); /* Creates 2 columns of equal width */
+        }
 }

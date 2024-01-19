@@ -21,12 +21,12 @@ let roosterSound = document.getElementById('sound8');
 let sheepSound = document.getElementById('sound9');
 let horseSound = document.getElementById('sound6');
 
-let textsEn = ['Animal Sound Game', 'Click on animal pictures to hear the sounds. Feel free to use the keyboard as well. The map for keyboard is provided.', 'Animal Sound Key', 'Hen','Dog','Duck','Goat','Cow', 'Pig', 'Rooster', 'Sheep', 'Horse', 'Where is the','Thanks for stopping by! Created by Zenaida Adame'];
-let textsEs = ['Juego de Sonidos de Animales', 'Haz clic en las imágenes de los animales para escuchar los sonidos. No dudes en usar el teclado. Se proporciona una guía para el teclado.','Tecla de sonido de animal', 'Gallina', 'Perro', 'Pato', 'Cabra', 'Vaca', 'Cerdo', 'Gallo', 'Oveja', 'Caballo', '¿Dónde está','¡Gracias por pasar! Creado por Zenaida Adame'];
+let textsEn = ['Learn Farm Animals in Spanish', 'Click on animal pictures to hear the sounds. Feel free to use the keyboard as well. The map for keyboard is provided.', 'Animal Sound Key', 'Hen','Dog','Duck','Goat','Cow', 'Pig', 'Rooster', 'Sheep', 'Horse', 'Where is the','Thanks for stopping by! Created by Zenaida Adame'];
+let textsEs = ['Aprender animales de granja en español', 'Haz clic en las imágenes de los animales para escuchar los sonidos. No dudes en usar el teclado. Se proporciona una guía para el teclado.','Tecla de sonido de animal', 'Gallina', 'Perro', 'Pato', 'Cabra', 'Vaca', 'Cerdo', 'Gallo', 'Oveja', 'Caballo', '¿Dónde está','¡Gracias por pasar! Creado por Zenaida Adame'];
 let question = document.getElementsByTagName('h2')[0];
 
 let animalsEn = ["Hen", "Dog", "Duck", "Goat", "Cow", "Pig", "Rooster", "Sheep", "Horse"];
-let animalsEs = ["Gallina", "Perro", "Pato", "Cabra", "Vaca", "Cerdo", "Gallo", "Oveja", "Caballo"];
+let animalsEs = ["La Gallina", "El Perro", "El Pato", "La Cabra", "La Vaca", "El Cerdo", "El Gallo", "La Oveja", "El Caballo"];
 
 let score = 0;
 
@@ -40,16 +40,16 @@ updateQuestion();
 function updateQuestion() {
         // Update the text content of the question element with the question and animal name
         if (currentLanguage == 'english') {
-            question.textContent = textsEn[12] + "" + currentAnimal + "?";
+            question.textContent = textsEn[12] + " " + currentAnimal + "?";
         } else {
-            question.textContent = textsEs[12] + "" + currentAnimal + "?";
+            question.textContent = textsEs[12] + " " + currentAnimal + "?";
         };
     }
     
 // Attach event listeners to the buttons
 henButton.addEventListener('click', function() {
 playSound(henSound);
-if (currentAnimal === 'Hen') {
+if (currentAnimal === 'Hen' || currentAnimal === 'La Gallina') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -69,12 +69,12 @@ if (currentAnimal === 'Hen') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 dogButton.addEventListener('click', function() {
 playSound(dogSound);
-if (currentAnimal === 'Dog') {
+if (currentAnimal === 'Dog'|| currentAnimal === 'El Perro') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -94,12 +94,12 @@ if (currentAnimal === 'Dog') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 duckButton.addEventListener('click', function() {
 playSound(duckSound);
-if (currentAnimal === 'Duck') {
+if (currentAnimal === 'Duck'|| currentAnimal === 'El Pato') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -120,12 +120,12 @@ if (currentAnimal === 'Duck') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-document.getElementById('question').innerText = question + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 goatButton.addEventListener('click', function() {
 playSound(goatSound);
-if (currentAnimal === 'Goat') {
+if (currentAnimal === 'Goat'|| currentAnimal === 'La Cabra') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -147,12 +147,12 @@ if (currentAnimal === 'Goat') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-    question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
     updateQuestion();
 });
 cowButton.addEventListener('click', function() {
 playSound(cowSound);
-if (currentAnimal === 'Cow') {
+if (currentAnimal === 'Cow'|| currentAnimal === 'La Vaca') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -174,12 +174,12 @@ if (currentAnimal === 'Cow') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-    question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
     updateQuestion();
 });
 pigButton.addEventListener('click', function() {
 playSound(pigSound);
-if (currentAnimal === 'Pig') {
+if (currentAnimal === 'Pig'|| currentAnimal === 'El Cerdo') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -201,12 +201,12 @@ if (currentAnimal === 'Pig') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 roosterButton.addEventListener('click', function() {
 playSound(roosterSound);
-if (currentAnimal === 'Rooster') {
+if (currentAnimal === 'Rooster'|| currentAnimal === 'El Gallo') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -228,12 +228,12 @@ if (currentAnimal === 'Rooster') {
     }, 1000);
 }
     currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-question.textContent = question.textContent + currentAnimal + "?";
+    question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 sheepButton.addEventListener('click', function() {
 playSound(sheepSound);
-if (currentAnimal === 'Sheep') {
+if (currentAnimal === 'Sheep'|| currentAnimal === 'La Oveja') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -255,12 +255,12 @@ if (currentAnimal === 'Sheep') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 horseButton.addEventListener('click', function() {
 playSound(horseSound);
-if (currentAnimal === 'Horse') {
+if (currentAnimal === 'Horse'|| currentAnimal === 'El Caballo') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
@@ -280,7 +280,7 @@ if (currentAnimal === 'Horse') {
     }, 1000);
 }
 currentAnimal = currentLanguage == 'english' ? animalsEn[Math.floor(Math.random() * animalsEn.length)] : animalsEs[Math.floor(Math.random() * animalsEs.length)];
-question.textContent = question.textContent + currentAnimal + "?";
+question.textContent = question.textContent + " " + currentAnimal + "?";
 updateQuestion();
 });
 
