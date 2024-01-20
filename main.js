@@ -53,7 +53,7 @@ if (currentAnimal === 'Hen' || currentAnimal === 'La Gallina') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -62,7 +62,7 @@ if (currentAnimal === 'Hen' || currentAnimal === 'La Gallina') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -78,7 +78,7 @@ if (currentAnimal === 'Dog'|| currentAnimal === 'El Perro') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -87,7 +87,7 @@ if (currentAnimal === 'Dog'|| currentAnimal === 'El Perro') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -103,7 +103,7 @@ if (currentAnimal === 'Duck'|| currentAnimal === 'El Pato') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -112,7 +112,7 @@ if (currentAnimal === 'Duck'|| currentAnimal === 'El Pato') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -129,7 +129,7 @@ if (currentAnimal === 'Goat'|| currentAnimal === 'La Cabra') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -139,7 +139,7 @@ if (currentAnimal === 'Goat'|| currentAnimal === 'La Cabra') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -156,7 +156,7 @@ if (currentAnimal === 'Cow'|| currentAnimal === 'La Vaca') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -166,7 +166,7 @@ if (currentAnimal === 'Cow'|| currentAnimal === 'La Vaca') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -183,7 +183,7 @@ if (currentAnimal === 'Pig'|| currentAnimal === 'El Cerdo') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -193,7 +193,7 @@ if (currentAnimal === 'Pig'|| currentAnimal === 'El Cerdo') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -210,7 +210,7 @@ if (currentAnimal === 'Rooster'|| currentAnimal === 'El Gallo') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -220,7 +220,7 @@ if (currentAnimal === 'Rooster'|| currentAnimal === 'El Gallo') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -237,7 +237,7 @@ if (currentAnimal === 'Sheep'|| currentAnimal === 'La Oveja') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -247,7 +247,7 @@ if (currentAnimal === 'Sheep'|| currentAnimal === 'La Oveja') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';
@@ -264,7 +264,7 @@ if (currentAnimal === 'Horse'|| currentAnimal === 'El Caballo') {
     score++;
     document.getElementById('scoreNumber').innerText = score;
     let star = document.createElement('img');
-    star.src = "../images/star.png";
+    star.src = "/images/star.png";
     document.getElementById('symbols').appendChild(star);
     setTimeout(function(){
         star.style.display ='none';
@@ -273,7 +273,7 @@ if (currentAnimal === 'Horse'|| currentAnimal === 'El Caballo') {
     score--;
     document.getElementById('scoreNumber').innerText = score;
     let x = document.createElement('img');
-    x.src = "../images/x.png";
+    x.src = "/images/x.png";
     document.getElementById('symbols').appendChild(x);
     setTimeout(function(){
         x.style.display ='none';

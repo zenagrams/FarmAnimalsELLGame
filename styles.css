@@ -194,9 +194,28 @@ button{
     gap: 30px;
     flex-direction: column;
     }
-    .row {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr); /* Creates 5 rows of equal height */
-        grid-template-columns: repeat(5, 1fr); /* Creates 2 columns of equal width */
-        }
+
+    #buttonen,#buttones{
+        margin-right:130px;
+    }
+    #link{
+        padding-bottom:30px;
+    }
+
+    .game-score-container{
+        flex-direction: row-reverse;
+        padding-top: 5px;
+    }
+    #score{
+        margin-right:100px;
+    }
+    #question{
+        margin-left:10px;
+    }
+    .aside-container{
+        display:none;
+    }
+    #container{
+        margin-top: 0;
+    }
 }
