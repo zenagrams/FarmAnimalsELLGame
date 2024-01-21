@@ -1,5 +1,7 @@
 *{
     font-family: sans-serif;
+    margin:0px;
+    padding:0;
 }
 
 #logo{
@@ -26,7 +28,7 @@ color:white;
 header, footer{
     background-color: #836f63;
     margin:0 0;
-    padding: 1rem;
+    padding:1rem;
 }
 
 footer,.intro{
@@ -196,7 +198,7 @@ button{
     }
 
     #buttonen,#buttones{
-        margin-right:130px;
+        margin-right:50px;
     }
     #link{
         padding-bottom:30px;
@@ -217,5 +219,23 @@ button{
     }
     #container{
         margin-top: 0;
+    }
+    #gallery{
+        width:375px;
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #gallery{
+        width:275px;
+        height:auto;
+    }
+    #question{
+    font-size: 20px;
+    margin-right:1px;
+    }
+    #buttonen,#buttones{
+        margin-right:1px;
     }
 }
